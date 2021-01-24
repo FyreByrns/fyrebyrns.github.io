@@ -18,10 +18,14 @@ div.block {
 	background: var(--col-back-light);
 }
 
-p.note { text-align: center; }
+a { color: var(--col-text-emphasis); }
+
+p { padding: 10px 25px 10px 25px; }
+p.note { margin-top: 0; margin-bottom: 0; padding: 0px 0px 0px 0px; text-align: center; border-bottom: solid; }
 
 h1, h2, h3, h4 {
+	padding: 0px 0px 0px 0px;
+	margin-bottom: 0;
 	color: var(--col-text-emphasis);
 	text-align: center;
 }
-
