@@ -1,2 +1,2 @@
-# fyrebyrns.github.io
-Test website
+## fyrebyrns.github.io
+Static-content website for whatever I need at the moment.
