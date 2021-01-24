@@ -3,6 +3,7 @@
 
 	--col-text-normal: #8a8a8a;
 	--col-text-emphasis: #ffd261;
+	--col-text-emphasis-dark: #ffb600;
 	--col-back-light: #121216;
 	--col-back-dark: #000016;
 }
@@ -17,11 +18,35 @@ div.block {
 	color: var(--col-text-normal);
 	background: var(--col-back-light);
 }
+div.block:hover {
+	outline: solid var(--col-text-emphasis);
+}
+div.block:active{
+	transform: rotate(-1deg);
+}
 
 a { color: var(--col-text-emphasis); }
+a:hover { color: var(--col-text-emphasis-dark); }
 
-p { padding: 10px 25px 10px 25px; }
-p.note { margin-top: 0; margin-bottom: 0; padding: 0px 0px 0px 0px; text-align: center; border-bottom: solid; }
+p { 
+	position: relative; 
+	padding: 10px 25px 10px 25px; 
+}
+p.note {
+	margin: 0 0 0 0;
+	text-align: center;
+	position: relative;
+	display: table;
+	margin: auto;
+}
+p.note:after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	border-bottom: solid;
+	content: "";
+}
 
 h1, h2, h3, h4 {
 	padding: 0px 0px 0px 0px;
