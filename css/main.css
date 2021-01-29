@@ -33,6 +33,11 @@ a.block {
 	outline: solid var(--col-text-emphasis);
 }
 
+ul {
+	padding: 0;
+	margin: 0;
+}
+
 td {
 	margin: 10px;
 	display: inline-block;
