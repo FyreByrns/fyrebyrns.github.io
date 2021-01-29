@@ -5,6 +5,7 @@
 	--col-text-emphasis: #ffd261;
 	--col-text-emphasis-dark: #ffb600;
 	--col-back-light: #121216;
+	--col-back-mid: #090916;
 	--col-back-dark: #000016;
 }
 
@@ -12,17 +13,37 @@ body {
 	background: var(--col-back-dark);
 }
 
-div.block {
+.block {
+	margin: 0;
+	height:100%;
+	display: block;
+}
+a.block {
+	text-align: center;
+	font-size: 200%;
+	text-decoration: none;
+}
+
+.floatcenter {
 	margin-left: 10%;
 	margin-right: 10%;
 	color: var(--col-text-normal);
 	background: var(--col-back-light);
 }
-div.block:hover {
+.floatcenter:hover {
 	outline: solid var(--col-text-emphasis);
 }
-div.block:active{
-	transform: rotate(-1deg);
+
+td {
+	margin: 10px;
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background: var(--col-back-mid);
+	outline: solid var(--col-back-dark);
+}
+td:hover {
+	outline: solid var(--col-text-emphasis);
 }
 
 a { color: var(--col-text-emphasis); }
