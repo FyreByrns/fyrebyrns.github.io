@@ -20,7 +20,6 @@ body {
 }
 a.block {
 	text-align: center;
-	font-size: 200%;
 	text-decoration: none;
 }
 
@@ -53,14 +52,20 @@ p {
 	position: relative; 
 	padding: 10px 25px 10px 25px; 
 }
-p.note {
+p.blocktext {
+	color: var(--col-text-normal);
+	padding: 0;
+	margin: 5%;
+}
+
+.note {
 	margin: 0 0 0 0;
 	text-align: center;
 	position: relative;
 	display: table;
 	margin: auto;
 }
-p.note:after {
+.note:after {
 	position: absolute;
 	left: 0;
 	bottom: 0;
