@@ -1,4 +1,5 @@
 @import "code.css";
+@import "dnd.css";
 :root {
 	font-family: monospace;
 	--col-text-normal: #8a8a8a;
@@ -79,7 +80,7 @@ p.blocktext {
 	margin: 5%;
 }
 
-.note {
+p.note {
 	margin: 0;
 	padding-top: 0;
 	text-align: center;
@@ -88,7 +89,7 @@ p.blocktext {
 	margin: auto;
 }
 
-.note:after {
+p.note:after {
 	position: absolute;
 	left: 0;
 	bottom: 0;
