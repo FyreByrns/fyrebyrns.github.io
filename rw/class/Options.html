@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>gcw</title>
+<base href="../../" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+<ul>
+
+
+<div class="floatcenter"> 
+<h1> Options.cs </h1>
+<p class="note"><code class="relationship"> object > Options </code></p>
+<p>
+Contains game options and controls. Options are loaded from <code class="file">~/UserData/options.txt</code>
+</p>
+</div>
+
+<div class="floatcenter"> 
+<h3 id="Constructor"> Constructor </h3>
+<p>
+set <code class="field">resolution</code> to 1 </br>
+set <code class="field">soundEffectsVolume</code> to 0.8 </br>
+set <code class="field">musicVolume</code> to 0.8 </br>
+set <code class="field">arenaMusicVolume</code> to 0.625 </br>
+<code class="if"><code class="file">~/UserData/options.txt</code> exists</code>
+<a href="rw/class/Options.html#Load"> Load </a>
+</p>
+</div>
+
+<div class="floatcenter"> 
+<h3 id="Load"> Load </h3>
+<p>
+<a href="rw/class/Options.html#FromString"> FromString (<code class="file">~/UserData/options.txt</code>)</a>
+</p>
+</div>
+
+<div class="floatcenter"> 
+<h3 id="FromString"> FromString </h3>
+<p class="note"><code class="params"> string s </code></p>
+<p>
+set <code class="field">windowed</code> to false </br>
+split s into array with /&lt;optA&gt;/ </br>
+for each string in the array split into strings token and values with /&lt;optB&gt;/: </br>
+<code class="if">token = ScreenResolution</code> parse <code class="field">resolution</code> from value 1 </br>
+<code class="if">token = InputSetup</code> set <code class="field">controls</code> to <a href="rw/class/Options/ControlSetup.html#MakeFromString"> ControlSetup.MakeFromString (value 1, value 2) </a> </br>
+<code class="if">token = Windowed</code> set <code class="field">windowed</code> to true </br>
+<code class="if">token = SoundVol</code> parse <code class="field">soundEffectsVolume</code> from value 1 </br>
+<code class="if">token = MusicVol</code> parse <code class="field">musicVolume</code> from value 1 </br>
+<code class="if">token = ArenaMusicVol</code> parse <code class="field">arenaMusicVolume</code> from value 1 </br>
+<code class="if">token = Language</code> parse <code class="field">language</code> from value 1 </br>
+<code class="if">token = SaveSlot</code> parse <code class="field">saveSlot</code> from value 1 </br>
+<code class="if">token = AllGamePads</code> set <code class="field">allGamePads</code> to true of value 1 is 1, otherwise to false </br>
+<code class="if">token = PlayerToSetInputFor</code> parse <code class="field">playerToSetInputFor</code> from value 1 </br>
+</p>
+</div>
+
+</ul>
+</body>
+</html>
