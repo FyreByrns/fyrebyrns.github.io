@@ -2,11 +2,13 @@ code {
 	color: white;
 	background: var(--col-back-mid);
 }
+
 code.relationship {
 	color: white;
 	font-size: 120%;
 	background: none;
 }
+
 code.params {
 	color: LightBlue;
 	font-size: 120%;
@@ -24,6 +26,7 @@ code.file:before {
 	color: var(--col-text-dark);
 	background: var(--col-yellow-light);
 }
+
 code.file {
 	color: black;
 	background: var(--col-yellow-dark);
@@ -41,6 +44,7 @@ code.try:before {
 	color: var(--col-text-dark);
 	background: var(--col-green-light);
 }
+
 code.try {
 	color: black;
 	background: var(--col-green-dark);
@@ -52,6 +56,7 @@ code.catch:before {
 	color: var(--col-text-dark);
 	background: var(--col-red-light);
 }
+
 code.catch {
 	color: black;
 	background: var(--col-red-dark);
