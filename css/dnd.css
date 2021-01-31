@@ -1,5 +1,26 @@
 :root {
     --col-gold: #fcba05;
     --col-silver: #9bb0b4;
+    --col-copper: #e76813;
+    --col-units: #0084ff;
 }
 
+span[currency][gp]:after {
+    content: "gp";
+    color: var(--col-gold);
+}
+
+span[currency][sp]:after {
+    content: "sp";
+    color: var(--col-silver);
+}
+
+span[currency][cp]:after {
+    content: "cp";
+    color: var(--col-copper);
+}
+
+span[units]:after{
+    content: " " attr(units);
+    color: var(--col-units);
+}
