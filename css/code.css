@@ -3,6 +3,21 @@ code {
 	background: var(--col-back-mid);
 }
 
+code[t] {
+	margin-left: 25px;
+	display: block;
+}
+
+code[c] {
+	color: rgb(100, 160, 0);
+	font-size: 80%;
+	position:absolute;
+	left: 50%;
+}
+code[c]::before{
+	content: "//";
+}
+
 code.relationship {
 	color: white;
 	font-size: 120%;

@@ -6,14 +6,40 @@
     <title>gcw</title>
     <base href="../../../" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/code.css" />
 </head>
 
 <body>
     <div class="floatcenter">
         <h1> Structure </h1>
         <p class="note"><i> How everything is put together </i></p>
+        <h3> Scope </h3>
         <p>
-            Everything in C&num; 
+            Everything in C# is in within a scope. If something is not accessible from the current scope, it cannot be
+            used. <br>
+            If a scope is within another scope, everything accessible from the containing scope is accessible within the
+            contained scope. <br>
+            For example:
+            <code style="display: block;">
+            namespace Hello { <code c> a namespace is a scope </code>
+            <br><code t>
+            class Color { <code c> a class is a scope </code>
+            <br><code t>
+            byte r, g, b, a; 
+            <br>
+            public void PrintColour(){ <code c> a method is a scope </code>
+            <br> <code t>
+            Console.WriteLine($"{r},{g},{b},{a}"); <code c> r, g, b, and a are accessible here </code>
+            </code>
+            } </code>
+            } </code>
+            } </code>
+
+        </p>
+
+        <h3> Names </h3>
+        <p>
+            Everything in C# has a name.
         </p>
     </div>
 </body>
