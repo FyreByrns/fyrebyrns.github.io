@@ -4,6 +4,11 @@
 @import "headers.css";
 @import "text.css";
 
+:root {
+	font-family: sans-serif;
+	font-size: 110%;
+}
+
 body {
 	background: var(--col-back-dark);
 }
