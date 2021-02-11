@@ -8,8 +8,8 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 
     <!-- discord embed stuff -->
-    <meta content="gcw > rw > course > pages > structure" property="og:title">
-    <meta content="basic structure of C#" property="og:description">
+    <meta content="C# Structure" property="og:title">
+    <meta content="The basic structure of C#" property="og:description">
     <meta content="https://fyrebyrns.github.io/rw/course/pages/structure.html" property="og:url">
     <meta content="#ffd261" data-react-helmet="true" name="theme-color">
 </head>
@@ -24,22 +24,35 @@
             used. <br>
             If a scope is within another scope, everything accessible from the containing scope is accessible within the
             contained scope. <br>
-            For example:
-            <code style="display: block;">
-            namespace Hello { <code c> a namespace is a scope </code>
-            <br><code t>
-            class Color { <code c> a class is a scope </code>
-            <br><code t>
-            byte r, g, b, a; 
-            <br>
-            public void PrintColour(){ <code c> a method is a scope </code>
-            <br> <code t>
-            Console.WriteLine($"{r},{g},{b},{a}"); <code c> r, g, b, and a are accessible here </code>
-            </code>
-            } </code>
-            } </code>
+            As a general rule, an opening curly brace (<code style="display: inline;">{</code>) is the start of a scope,
+            and a closing curly brace (<code style="display: inline;">}</code>) is the end of a scope. <br>
+            &nbsp; <br>
+            In the code below, <span style="color: var(--col-scope-highlight);"> bright blue </span> lines are used to
+            show scopes. <br>
+            &nbsp; <br> 
+            Code: 
+            <code>
+
+            <code scope> namespace ExampleNamespace { 
+                <code t scope> class ExampleClass { 
+                    <code t> string greeting = "Hello"; </code> <code c> These two strings exist within the scope of ExampleClass . . .</code>
+                    <code t> string location = "world"; </code>
+                    <br>
+                    <code t scope> public void SayHello() {
+                        <code t>
+                            Console.WriteLine(greeting + " " + location + !!"); <code c> . . . so they can be used here. </code>
+                        </code>
+                    } </code>
+                } </code>
             } </code>
 
+            </code>
+
+            Output:
+            <code>
+                Hello world!!
+            </code>
+            
         </p>
 
         <h3> Names </h3>

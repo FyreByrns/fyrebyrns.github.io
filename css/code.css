@@ -1,5 +1,12 @@
+:root {
+	--col-code-text: white;
+	--col-code-comment: rgb(100, 160, 0);
+	--col-scope-highlight: #2ae6ff;
+}
+
 code {
-	color: white;
+	display: block;
+	color: var(--col-code-text);
 	background: var(--col-back-mid);
 }
 
@@ -9,13 +16,19 @@ code[t] {
 }
 
 code[c] {
-	color: rgb(100, 160, 0);
+	color: var(--col-code-comment);
 	font-size: 80%;
-	position:absolute;
+	position: absolute;
 	left: 50%;
 }
-code[c]::before{
+
+code[c]::before {
 	content: "//";
+}
+
+code[scope] {
+	border-left-color: var(--col-scope-highlight);
+	border-left-style: solid;
 }
 
 code.relationship {
