@@ -1,0 +1,18 @@
+h1, h2, h3, h4 {
+	padding: 0;
+	margin-bottom: 0;
+	color: var(--col-text-emphasis);
+	text-align: center;
+}
+
+h3, h4 {
+	padding-left: 25px;
+	text-align: left;
+}
+
+/* center headers where they should be centered */
+
+*.block>h1, *.block>h2, *.block>h3, *.block>h4, *.floatcenter>h1, *.floatcenter>h2, *.floatcenter>h3, *.floatcenter>h4 {
+	padding: 0;
+	text-align: center;
+}

@@ -1,21 +1,8 @@
 @import "code.css";
 @import "dnd.css";
-:root {
-	font-family: monospace;
-	--col-text-normal: #8a8a8a;
-	--col-text-dark: #404040;
-	--col-text-emphasis: #ffd261;
-	--col-text-emphasis-dark: #ffb600;
-	--col-back-light: #121216;
-	--col-back-mid: #090916;
-	--col-back-dark: #000016;
-	--col-yellow-light: #fffcc7;
-	--col-green-light: #c4ffc7;
-	--col-red-light: #ffd6c7;
-	--col-yellow-dark: #e6e3b3;
-	--col-green-dark: #b3e6b5;
-	--col-red-dark: #e6c0b3;
-}
+@import "colours.css";
+@import "headers.css";
+@import "text.css";
 
 body {
 	background: var(--col-back-dark);
@@ -98,23 +85,6 @@ p.note:after {
 	width: 100%;
 	border-bottom: solid;
 	content: "";
-}
-
-h1, h2, h3, h4 {
-	padding: 0;
-	margin-bottom: 0;
-	color: var(--col-text-emphasis);
-	text-align: center;
-}
-
-h3, h4 {
-	padding-left: 25px;
-	text-align: left;
-}
-
-*.block>h1, *.block>h2, *.block>h3, *.block>h4 {
-	padding: 0;
-	text-align: center;
 }
 
 img {
