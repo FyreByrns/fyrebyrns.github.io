@@ -12,9 +12,15 @@
     <meta content="The basic structure of C#" property="og:description">
     <meta content="https://fyrebyrns.github.io/rw/course/pages/structure.html" property="og:url">
     <meta content="#ffd261" data-react-helmet="true" name="theme-color">
+
+    <!-- prismjs syntax highlighting -->
+    <link href="lib/prism/prism.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
+    <!-- prismjs syntax highlighting-->
+    <script src="lib/prism/prism.js"></script>
+
     <div class="floatcenter">
         <h1> Structure </h1>
         <p class="note"><i> How everything is put together </i></p>
@@ -26,27 +32,20 @@
             contained scope. <br>
             As a general rule, an opening curly brace (<code style="display: inline;">{</code>) is the start of a scope,
             and a closing curly brace (<code style="display: inline;">}</code>) is the end of a scope. <br>
-            &nbsp; <br>
-            In the code below, <span style="color: var(--col-scope-highlight);"> bright blue </span> lines are used to
-            show scopes. <br>
             &nbsp; <br> 
             Code: 
-            <code>
-
-            <code scope> namespace ExampleNamespace { 
-                <code t scope> class ExampleClass { 
-                    <code t> string greeting = "Hello"; </code> <code c> These two strings exist within the scope of ExampleClass . . .</code>
-                    <code t> string location = "world"; </code>
-                    <br>
-                    <code t scope> public void SayHello() {
-                        <code t>
-                            Console.WriteLine(greeting + " " + location + "!!"); <code c> . . . so they can be used here. </code>
-                        </code>
-                    } </code>
-                } </code>
-            } </code>
-
-            </code>
+            <pre><code class="lang-cs">
+namespace ExampleNamespace { 
+    class ExampleClass { 
+        string greeting = "Hello"; // these two strings exist within the scope of ExampleClass
+        string location = "world"; 
+        
+        public void SayHello() {
+                Console.WriteLine(greeting + " " + location + "!!"); // . . . so they can be used here
+        } 
+    } 
+} 
+            </code></pre>
 
             Output:
             <code>
