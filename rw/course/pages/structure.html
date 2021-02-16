@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 
     <!-- discord embed stuff -->
-    <meta content="C# Structure" property="og:title">
-    <meta content="The basic structure of C#" property="og:description">
+    <meta content="Basics" property="og:title">
+    <meta content="The basics of how C# is put together." property="og:description">
     <meta content="https://fyrebyrns.github.io/rw/course/pages/structure.html" property="og:url">
     <meta content="#ffd261" data-react-helmet="true" name="theme-color">
 
     <!-- prismjs syntax highlighting -->
-    <link href="lib/prism/prism.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/prism/prism.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
@@ -32,9 +32,10 @@
             contained scope. <br>
             As a general rule, an opening curly brace (<code style="display: inline;">{</code>) is the start of a scope,
             and a closing curly brace (<code style="display: inline;">}</code>) is the end of a scope. <br>
-            &nbsp; <br> 
-            Code: 
-            <pre><code class="lang-cs">
+            &nbsp; <br>
+        </p>
+         <h5> Code: </h4>
+        <pre><code class="lang-cs">
 namespace ExampleNamespace { 
     class ExampleClass { 
         string greeting = "Hello"; // these two strings exist within the scope of ExampleClass
@@ -46,18 +47,32 @@ namespace ExampleNamespace {
     } 
 } 
             </code></pre>
-
-            Output:
-            <code>
-                Hello world!!
-            </code>
-            
+            <h5> Output: </h5>
+            <p>
+            <code> Hello world!! </code>
         </p>
 
-        <h3> Names </h3>
+        <h3> Names and Types </h3>
         <p>
-            Everything in C# has a name.
+            Everything in C# has a name and a type. <br>
+            Everything inside of a class is called a "member".
         </p>
+        <pre><code class="lang-cs">
+string message; // a "string" (text) with the name "message"
+int daysInYear = 365; // an "int" (integer) with the name "daysInYear"
+List&lt;Lizard&gt; lizards; // a list of lizards named "lizards"
+        </code></pre>
+        <p>
+            Things also have access modifiers, which denote where else they can be used. <br>
+            The access modifiers you will run across most often will be "public" and "private". <br>
+            "public" means that
+        </p>
+        <pre><code class="lang-cs">
+class Example {
+    string data; // no access modifiers specified, so it is "private"
+    public string name;
+}
+        </code></pre>
     </div>
 </body>
 
