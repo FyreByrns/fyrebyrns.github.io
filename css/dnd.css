@@ -3,6 +3,10 @@
     --col-silver: #9bb0b4;
     --col-copper: #e76813;
     --col-units: #0084ff;
+    --col-possible-back: rgb(96, 182, 107);
+    --col-possible-fore: rgb(255, 255, 255);
+    --col-impossible-back: rgb(212, 89, 89);
+    --col-impossible-fore: rgb(255, 255, 255);
 }
 
 span[currency][gp]:after {
@@ -20,7 +24,39 @@ span[currency][cp]:after {
     color: var(--col-copper);
 }
 
-span[units]:after{
+span[units]:after {
     content: " " attr(units);
     color: var(--col-units);
+}
+
+div.content-island {
+    border: 24px solid var(--col-back-dark);
+    padding: 8px;
+    margin-bottom: 24px;
+}
+
+div.content-island:hover {
+    box-shadow: inset 0px 0px 0px 4px var(--col-text-emphasis);
+}
+
+div.floatcenter:hover>div.content-island {
+    outline: solid var(--col-text-emphasis);
+}
+
+span[info] {
+    font-size: 80%;
+}
+
+span[is] {
+    color: var(--col-possible-fore);
+    border-bottom: 1px solid var(--col-possible-back);
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+span[not] {
+    color: var(--col-impossible-fore);
+    background-color: var(--col-impossible-back);
+    margin-left: 2px;
+    margin-right: 2px;
 }

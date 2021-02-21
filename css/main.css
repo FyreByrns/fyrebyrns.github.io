@@ -74,7 +74,7 @@ p.blocktext {
 	margin: 5%;
 }
 
-p.note {
+.note {
 	margin: 0;
 	padding-top: 0;
 	text-align: center;
@@ -83,7 +83,7 @@ p.note {
 	margin: auto;
 }
 
-p.note:after {
+.note:after {
 	position: absolute;
 	left: 0;
 	bottom: 0;
