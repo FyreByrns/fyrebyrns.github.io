@@ -33,9 +33,11 @@ a.block {
 	background: var(--col-back-light);
 }
 
+/*
 .floatcenter:hover {
 	outline: solid var(--col-text-emphasis);
 }
+*/
 
 ul {
 	padding: 0;

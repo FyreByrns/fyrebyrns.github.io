@@ -35,6 +35,7 @@ div.content-island {
     margin-bottom: 24px;
 }
 
+/*
 div.content-island:hover {
     box-shadow: inset 0px 0px 0px 4px var(--col-text-emphasis);
 }
@@ -42,9 +43,11 @@ div.content-island:hover {
 div.floatcenter:hover>div.content-island {
     outline: solid var(--col-text-emphasis);
 }
+*/
 
 span[info] {
     font-size: 80%;
+    font-family: monospace;
 }
 
 span[is] {
@@ -52,11 +55,15 @@ span[is] {
     border-bottom: 1px solid var(--col-possible-back);
     margin-left: 2px;
     margin-right: 2px;
+
+    background-image: linear-gradient(var(--col-possible-back), black);
 }
 
 span[not] {
     color: var(--col-impossible-fore);
-    background-color: var(--col-impossible-back);
+    border-bottom: 1px solid var(--col-impossible-back);
     margin-left: 2px;
     margin-right: 2px;
+
+    background-image: linear-gradient(var(--col-impossible-back), black);
 }
