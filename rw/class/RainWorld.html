@@ -11,7 +11,6 @@
 <body>
     <ul>
 
-
         <div class="floatcenter">
             <h1> RainWorld.cs </h1>
             <p class="note"><code
@@ -23,17 +22,60 @@
         </div>
 
         <div class="floatcenter">
-            <h3> Start </h3>
+            <h3 id="fields"> Fields </h3>
+            <div>
+                <h4> Texture2D </h4>
+                <ul>
+                    <li>apartmentsTex</li>
+                    <li>cityPalette</li>
+                    <li>corruption</li>
+                    <li>glyphs</li>
+                    <li>LightMask0</li>
+                    <li>maze</li>
+                    <li>sootMark</li>
+                    <li>sootMark2</li>
+                    <li>_CloudsTex</li>
+                    <li>_NoiseTex</li>
+                    <li>_NoiseTex2</li>
+                    <li>_TextGradientTex</li>
+                </ul>
+
+                <h4> Integer </h4>
+                <ul>
+                    <li>gameVersion</li>
+                    <li>worldVersion</li>
+                </ul>
+
+                <h4> Boolean </h4>
+                <ul>
+                    <li>flatIllustrations</li>
+                    <li>saveBackedUp</li>
+                </ul>
+
+                <h4> Misc </h4>
+                <ul>
+                    <li>RainWorld.BuildType buildType</li>
+                    <li>InGameTranslator inGameTranslator</li>
+                    <li>Options options</li>
+                    <li>PersistentData persistentData</li>
+                    <li>ProcessManager processManager</li>
+                    <li>PlayerProgression playerProgression</li>
+                    <li>RainWorldGame.SetupValues setup</li>
+                    <li>Dictionary&lt;string, FShader&gt; Shaders</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="floatcenter">
+            <h3 id="LoadSetupValues"> Start </h3>
             <p>
-                set buildType to RainWorld.BuildType.Distribution </br>
-                <code class="try">parse <code class="field">worldVersion</code> from <code class="file">~/World/worldVersion.txt </code>
-                </code>
-                <code class="catch">continue silently</code> </br>
-                set <code class="field">gameVersion</code> to 1 </br>
-                set <code class="field">setup</code> to <a href="rw/class/RainWorld.html#SetupValues"> SetupValues </a>
-                </br>
-                set <code class="field">options</code> to new <a href="rw/class/Options.html#Constructor"> new Options
-                    () </a> </br>
+            <ul>
+                <li> Set buildType to distribution. </li>
+                <li> Parse worldVersion from ~/World/worldVersion.txt </li>
+                <li> Set gameVersion to 1. </li>
+                <li> Set setup to <a href="rw/class/RainWorld.html#LoadSetupValues">LoadSetupValues()</a>. </li>
+            </ul>
+
             </p>
         </div>
 
