@@ -46,7 +46,6 @@ span[good] {
     border-bottom: 1px solid var(--col-possible-back);
     margin-left: 2px;
     margin-right: 2px;
-
     background-image: linear-gradient(var(--col-possible-back), black);
 }
 
@@ -55,11 +54,45 @@ span[bad] {
     border-bottom: 1px solid var(--col-impossible-back);
     margin-left: 2px;
     margin-right: 2px;
-
     background-image: linear-gradient(var(--col-impossible-back), black);
 }
 
-table.stats{
+table.stats {
     border: 1px solid var(--col-text-emphasis);
     text-align: center;
+}
+
+table.stats>thead>tr>td {
+    color: var(--col-text-emphasis);
+}
+
+table.stats>tbody {
+    font-family: monospace;
+}
+
+table.stats>tbody>tr>td:nth-child(2) {
+    /* highlight stat name */
+    color: var(--col-text-emphasis-dark);
+    text-transform: uppercase;
+}
+
+table.stats>tbody>tr>td:nth-child(3) {
+    /* highlight dice */
+    color: var(--col-yellow-light);
+}
+
+table.stats>tbody>tr>td:nth-child(4)[positive] {
+    /* highlight positive modifiers */
+    color: var(--col-green-dark);
+}
+table.stats>tbody>tr>td:nth-child(4)[positive]::before {
+    content: "+";
+}
+
+table.stats>tbody>tr>td:nth-child(4)[negative] {
+    /* highlight negative modifiers */
+    color: var(--col-red-dark);
+}
+table.stats>tbody>tr>td:nth-child(4)[negative]::before {
+    content: "-";
 }
