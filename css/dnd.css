@@ -35,22 +35,13 @@ div.content-island {
     margin-bottom: 24px;
 }
 
-/*
-div.content-island:hover {
-    box-shadow: inset 0px 0px 0px 4px var(--col-text-emphasis);
-}
-
-div.floatcenter:hover>div.content-island {
-    outline: solid var(--col-text-emphasis);
-}
-*/
-
 span[info] {
     font-size: 80%;
     font-family: monospace;
+    display: inline;
 }
 
-span[is] {
+span[good] {
     color: var(--col-possible-fore);
     border-bottom: 1px solid var(--col-possible-back);
     margin-left: 2px;
@@ -59,11 +50,16 @@ span[is] {
     background-image: linear-gradient(var(--col-possible-back), black);
 }
 
-span[not] {
+span[bad] {
     color: var(--col-impossible-fore);
     border-bottom: 1px solid var(--col-impossible-back);
     margin-left: 2px;
     margin-right: 2px;
 
     background-image: linear-gradient(var(--col-impossible-back), black);
+}
+
+table.stats{
+    border: 1px solid var(--col-text-emphasis);
+    text-align: center;
 }
