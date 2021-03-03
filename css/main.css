@@ -107,3 +107,9 @@ ul {
 div>ul {
 	padding: 10px 25px 10px 25px;
 }
+
+hr {
+	width: 10%;
+	border-color:var(--col-text-dark);
+	border-style:solid;
+}
