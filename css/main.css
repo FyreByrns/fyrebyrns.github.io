@@ -110,6 +110,6 @@ div>ul {
 
 hr {
 	width: 10%;
-	border-color:var(--col-text-dark);
-	border-style:solid;
+	border-color: var(--col-text-dark);
+	border-style: solid;
 }
