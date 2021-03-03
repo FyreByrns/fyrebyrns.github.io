@@ -57,9 +57,22 @@ span[bad] {
     background-image: linear-gradient(var(--col-impossible-back), black);
 }
 
+span[spell] {
+    color: var(--col-green-light);
+    font-family: monospace;
+    font-size: 120%;
+}
+
+span[range] {
+    color: var(--col-yellow-light);
+    font-family: monospace;
+    font-size: 120%;
+}
+
 table.stats {
     border: 1px solid var(--col-text-emphasis);
     text-align: center;
+    display: inline-block;
 }
 
 table.stats>thead>tr>td {
@@ -85,6 +98,7 @@ table.stats>tbody>tr>td:nth-child(4)[positive] {
     /* highlight positive modifiers */
     color: var(--col-green-dark);
 }
+
 table.stats>tbody>tr>td:nth-child(4)[positive]::before {
     content: "+";
 }
@@ -93,6 +107,7 @@ table.stats>tbody>tr>td:nth-child(4)[negative] {
     /* highlight negative modifiers */
     color: var(--col-red-dark);
 }
+
 table.stats>tbody>tr>td:nth-child(4)[negative]::before {
     content: "-";
 }
