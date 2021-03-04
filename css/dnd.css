@@ -69,6 +69,12 @@ span[range] {
     font-size: 120%;
 }
 
+span[roll] {
+    color: var(--col-silver);
+    font-family: monospace;
+    font-size: 120%;
+}
+
 table.stats {
     border: 1px solid var(--col-text-emphasis);
     text-align: center;

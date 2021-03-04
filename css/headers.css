@@ -10,9 +10,13 @@ h3, h4, h5 {
 	text-align: left;
 }
 
-/* center headers where they should be centered */
+h5 {
+	display: inline-block;
+	border-left: solid;
+}
 
 *.block>h1, *.block>h2, *.block>h3, *.block>h4, *.floatcenter>h1, *.floatcenter>h2, *.floatcenter>h3, *.floatcenter>h4 {
+	/* center headers where they should be centered */
 	padding: 0;
 	text-align: center;
 }
