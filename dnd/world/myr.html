@@ -40,6 +40,107 @@
 
         <div class="floatcenter">
             <h3> Fauna </h3>
+            <script>
+                function rollADie(faces) {
+                    return 1 + Math.floor(Math.random() * faces);
+                }
+                function sumArray(array) {
+                    return array.reduce((a, b) => a + b, 0);
+                }
+
+                function removeSmallest(array) {
+                    return array.sort().filter((_, i) => i)
+                }
+                function removeLargest(array) {
+                    return array.sort().reverse().filter((_, i) => i)
+                }
+
+                function generateStat(dice = 0, drop = 0, dropHigh = false, modifier = 0, sides = 6) {
+                    let array = [];
+                    for (var i = 0; i < dice; i++) {
+                        array.push(rollADie(sides));
+                    }
+
+                    if (drop > 0) {
+                        for (var i = 0; i < drop; i++) {
+                            if (dropHigh) {
+                                array = removeLargest(array);
+                            }
+                            else {
+                                array = removeSmallest(array);
+                            }
+                        }
+                    }
+
+                    return sumArray(array) + modifier;
+                }
+                function modifier(stat) {
+                    return Math.floor((stat - 10) / 2);
+                }
+
+                function generateHumanArray() {
+                    var stats =
+                        `
+                    str: ${str = generateStat(4, 1, false, 1)}  (${modifier(str)})
+                    dex: ${dex = generateStat(4, 1, false, 1)}  (${modifier(dex)})
+                    con: ${con = generateStat(4, 1, false, 1)}  (${modifier(con)})
+                    int: ${int = generateStat(4, 1, false, 0)}  (${modifier(int)})
+                    wis: ${wis = generateStat(4, 1, false, 0)}  (${modifier(wis)})
+                    cha: ${cha = generateStat(4, 1, false, 1)}  (${modifier(cha)})
+                    `;
+                    alert(stats);
+                }
+                function generateDwarvenArray() {
+                    var stats =
+                        `
+                    str: ${str = generateStat(4, 1, false, 1)}  (${modifier(str)})
+                    dex: ${dex = generateStat(3, 0, false, 0)}  (${modifier(dex)})
+                    con: ${con = generateStat(4, 1, false, 2)}  (${modifier(con)})
+                    int: ${int = generateStat(3, 0, false, 0)}  (${modifier(int)})
+                    wis: ${wis = generateStat(4, 1, false, 0)}  (${modifier(wis)})
+                    cha: ${cha = generateStat(4, 1, false, 0)}  (${modifier(cha)})
+                    `;
+                    alert(stats);
+                }
+                function generateElvenArray() {
+                    var stats =
+                        `
+                    str: ${str = generateStat(4, 1, true, 2)}  (${modifier(str)})
+                    dex: ${dex = generateStat(5, 2, false, 0)}  (${modifier(dex)})
+                    con: ${con = generateStat(4, 1, true, 2)}  (${modifier(con)})
+                    int: ${int = generateStat(4, 1, false, 1)}  (${modifier(int)})
+                    wis: ${wis = generateStat(4, 1, false, 0)}  (${modifier(wis)})
+                    cha (elves): ${cha = generateStat(4, 1, false, 0)}  (${modifier(cha)})
+                    cha (others): ${cha = generateStat(5, 2, true, 0)}  (${modifier(cha)})
+                    `;
+                    alert(stats);
+                }
+                function generateGnomishArray() {
+                    var stats =
+                        `
+                    str: ${str = generateStat(3, 0, false, 1, 4)}  (${modifier(str)})
+                    dex: ${dex = generateStat(5, 2)}  (${modifier(dex)})
+                    con: ${con = generateStat(3)}  (${modifier(con)})
+                    int: ${int = generateStat(4, 1)}  (${modifier(int)})
+                    wis: ${wis = generateStat(6, 2)}  (${modifier(wis)})
+                    cha: ${cha = generateStat(5, 2)}  (${modifier(cha)})
+                    `;
+                    alert(stats);
+                }
+                function generateStoneArray() {
+                    var stats =
+                        `
+                    str: ${str = generateStat(5, 2)}  (${modifier(str)})
+                    dex: ${dex = generateStat(3, 0, false, -1)}  (${modifier(dex)})
+                    con: ${con = generateStat(6, 1)}  (${modifier(con)})
+                    int: ${int = generateStat(4, 1)}  (${modifier(int)})
+                    wis: ${wis = generateStat(4, 1)}  (${modifier(wis)})
+                    cha: ${cha = generateStat(4, 2, false, 2)}  (${modifier(cha)})
+                    `;
+                    alert(stats);
+                }
+            </script>
+
             <h4> Sentient </h4>
 
             <div id="race-human" class="content-island">
@@ -54,8 +155,9 @@
                 Humans have no natural affinity for magic, but they can still learn. <br>
                 <hr>
                 <div id="race-human-stats">
+                    <button onclick="generateHumanArray()">Generate Array</button>
+                    <h4> Stats </h4>
                     <div style="display:inline-table;">
-                        <h4> Stats </h4>
                         <table class="stats">
                             <thead>
                                 <tr>
@@ -136,8 +238,9 @@
                 Dwarves sport any natural colour of skin.
                 <hr>
                 <div id="race-dwarf-stats">
+                    <button onclick="generateDwarvenArray()">Generate Array</button>
+                    <h4> Stats </h4>
                     <div style="display:inline-table;">
-                        <h4> Stats </h4>
                         <table class="stats">
                             <thead>
                                 <tr>
@@ -217,8 +320,9 @@
                 Elves sport any natural colour of skin.
                 <hr>
                 <div id="race-elf-stats">
+                    <button onclick="generateElvenArray()">Generate Array</button>
+                    <h4> Stats </h4>
                     <div style="display:inline-table;">
-                        <h4> Stats </h4>
                         <table class="stats">
                             <thead>
                                 <tr>
@@ -297,8 +401,9 @@
                 Gnomes sport any natural colour of skin.
                 <hr>
                 <div>
+                    <button onclick="generateGnomishArray()">Generate Array</button>
+                    <h4> Stats </h4>
                     <div style="display:inline-table;">
-                        <h4> Stats </h4>
                         <table class="stats">
                             <thead>
                                 <tr>
@@ -359,16 +464,20 @@
                     <span info bad>forgotten</span>
                 </div>
                 Sentient statues adorned with runes of power. <br>
-                Created in an era forgotten even to the Elves, the Living Stone walk Myr for reasons unknown to even them. <br>
+                Created in an era forgotten even to the Elves, the Living Stone walk Myr for reasons unknown to even
+                them. <br>
                 <br>
-                Largely forgotten in the current age, Living Stone are hidden across the world, hidden by ages of dust blowing over them, or hiding in long-forgotten halls. <br>
+                Largely forgotten in the current age, Living Stone are hidden across the world, hidden by ages of dust
+                blowing over them, or hiding in long-forgotten halls. <br>
                 <hr>
                 The look of a Living Stone will tell a story about their existance. <br>
-                A Stone which came to a gentle existance will have defined corners, perhaps delicate filigree adorning every inch of their body. <br>
+                A Stone which came to a gentle existance will have defined corners, perhaps delicate filigree adorning
+                every inch of their body. <br>
                 One which has lived through harsh conditions will be eroded smooth. <br>
                 Whenever a Living Stone is thinking, countless runes sparkle like the stars all over their bodies. <br>
                 <hr>
                 <div>
+                    <button onclick="generateStoneArray()">Generate Array</button>
                     <h4> Stats </h4>
                     <table class="stats">
                         <thead>
