@@ -1,0 +1,745 @@
+<head>
+	<style>
+		* {
+			font-family: monospace;
+			font-size: 99%;
+			-webkit-print-color-adjust: exact;
+		}
+
+		th,
+		td,
+		tr {
+			border: 1px solid;
+		}
+
+		table {
+			table-layout: fixed;
+			border-collapse: collapse;
+			border: 1px solid;
+			margin-bottom: 5px;
+		}
+
+		.highlight {
+			border: 2px double;
+		}
+
+		[unused] {
+			background: black;
+		}
+
+		[left] {
+			text-align: left;
+		}
+
+		[border-bottom] {
+			border-bottom: 2px double black;
+		}
+
+		[border-left] {
+			border-left: 2px double black;
+		}
+
+		[border-right] {
+			border-right: 2px double black;
+		}
+
+		[print-page] {
+			page-break-inside: avoid;
+			page-break-after: always;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<table print-page>
+			<colgroup width="65">
+				<col width=95 border-right>
+				<col span=2>
+				<col border-left>
+				<col>
+				<col border-left border-right>
+				<col span=2>
+				<col border-left>
+				<col>
+				<col border-left>
+			</colgroup>
+
+			<div daily>
+				<tr header>
+					<th rowspan=2 left> </th>
+					<th colspan=2>AM Bundles</th>
+					<th colspan=2>AM Trays</th>
+					<th unused>
+					<th colspan=2>PM Bundles</th>
+					<th colspan=2>PM Trays</th>
+					<th colspan=2 unused>
+				</tr>
+				<tr header border-bottom>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Total</th>
+
+					<th>Count</th>
+					<th>Value</th>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Total</th>
+				</tr>
+
+				<div left>
+					<tr>
+						<th>$1 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$2 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$3 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$5 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$10 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$20 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="border-bottom: 2px double;">
+						<th>$30 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</div>
+
+				<tr>
+					<th>Total</th>
+					<td unused></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+				</tr>
+
+				<tr style="height: 5;">
+					<td unused colspan=12></td>
+				</tr>
+			</div>
+			<div daily>
+				<tr header>
+					<th rowspan=2 left> </th>
+					<th colspan=2>AM Bundles</th>
+					<th colspan=2>AM Trays</th>
+					<th unused>
+					<th colspan=2>PM Bundles</th>
+					<th colspan=2>PM Trays</th>
+					<th colspan=2 unused>
+				</tr>
+				<tr header border-bottom>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Total</th>
+
+					<th>Count</th>
+					<th>Value</th>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Total</th>
+				</tr>
+
+				<div left>
+					<tr>
+						<th>$1 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$2 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$3 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$5 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$10 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$20 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="border-bottom: 2px double;">
+						<th>$30 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</div>
+
+				<tr>
+					<th>Total</th>
+					<td unused></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+				</tr>
+
+				<tr style="height: 5;">
+					<td unused colspan=12></td>
+				</tr>
+			</div>
+			<div daily>
+				<tr header>
+					<th rowspan=2 left> </th>
+					<th colspan=2>AM Bundles</th>
+					<th colspan=2>AM Trays</th>
+					<th unused>
+					<th colspan=2>PM Bundles</th>
+					<th colspan=2>PM Trays</th>
+					<th colspan=2 unused>
+				</tr>
+				<tr header border-bottom>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Total</th>
+
+					<th>Count</th>
+					<th>Value</th>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Total</th>
+				</tr>
+
+				<div left>
+					<tr>
+						<th>$1 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$2 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$3 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$5 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$10 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$20 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="border-bottom: 2px double;">
+						<th>$30 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</div>
+
+				<tr>
+					<th>Total</th>
+					<td unused></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+				</tr>
+
+				<tr style="height: 5;">
+					<td unused colspan=12></td>
+				</tr>
+			</div>
+			<div daily>
+				<tr header>
+					<th rowspan=2 left> </th>
+					<th colspan=2>AM Bundles</th>
+					<th colspan=2>AM Trays</th>
+					<th unused>
+					<th colspan=2>PM Bundles</th>
+					<th colspan=2>PM Trays</th>
+					<th colspan=2 unused>
+				</tr>
+				<tr header border-bottom>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Total</th>
+
+					<th>Count</th>
+					<th>Value</th>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Total</th>
+				</tr>
+
+				<div left>
+					<tr>
+						<th>$1 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$2 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$3 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$5 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$10 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$20 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="border-bottom: 2px double;">
+						<th>$30 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</div>
+
+				<tr>
+					<th>Total</th>
+					<td unused></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+				</tr>
+
+				<tr style="height: 5;">
+					<td unused colspan=12></td>
+				</tr>
+			</div>
+			<div daily>
+				<tr header>
+					<th rowspan=2 left> </th>
+					<th colspan=2>AM Bundles</th>
+					<th colspan=2>AM Trays</th>
+					<th unused>
+					<th colspan=2>PM Bundles</th>
+					<th colspan=2>PM Trays</th>
+					<th colspan=2 unused>
+				</tr>
+				<tr header border-bottom>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Total</th>
+
+					<th>Count</th>
+					<th>Value</th>
+					<th>Count</th>
+					<th>Value</th>
+					<th>Total</th>
+				</tr>
+
+				<div left>
+					<tr>
+						<th>$1 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$2 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$3 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$5 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$10 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>$20 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="border-bottom: 2px double;">
+						<th>$30 tickets</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</div>
+
+				<tr>
+					<th>Total</th>
+					<td unused></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+					<td unused></td>
+					<td></td>
+				</tr>
+
+				<tr style="height: 5;">
+					<td unused colspan=12></td>
+				</tr>
+			</div>
+		</table>
+	</div>
+</body>
